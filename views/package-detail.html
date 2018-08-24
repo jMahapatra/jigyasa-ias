@@ -1,0 +1,461 @@
+
+
+        <!--Main layout-->
+        <main>
+          
+          
+          <!--Section: Intro-->
+          <section>
+
+            <div class="row">
+
+              <div class="col-md-6 mb-4">
+
+                <!--Image-->
+                <div class="view overlay z-depth-1-half">
+
+                  <img width="780" height="520" src="https://mdbootstrap.com/wp-content/uploads/2016/11/mdb-jquery-pro.jpg" class="img-fluid z-depth-1 wp-post-image" alt="">
+                  <a href="https://mdbootstrap.com/components/" target="_blank">
+                    <div id="product-image" alt="Product image" class="mask rgba-white-light waves-effect waves-light"></div>
+                  </a>
+
+                </div>
+
+              </div>
+
+              <div class="col-md-6 mb-4" id="mdb-cta">
+
+                <p class="price"><span class="woocs_price_code" data-product-id="8460"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">€</span>&nbsp;59</span> – <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">€</span>&nbsp;899</span></span></p>
+
+
+                <style>
+                p.price {
+                  display: none;
+                }
+              </style>
+
+              <form class="variations_form cart" method="post" enctype="multipart/form-data" data-product_id="8460" >
+                
+                
+                
+                <!-- Pills navs -->
+                <ul id="license-type-tabs" class="nav md-pills nav-justified pills-info font-weight-bold">
+                  <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#tabPricingIndividuals" role="tab">Individuals</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#tabPricingTeams" role="tab">Teams</a>
+                  </li>
+                </ul>
+
+                <!-- Pills panels -->
+                <div class="tab-content pt-4 text-center">
+
+                  <!--Panel 1-->
+                  <div class="tab-pane fade in show active" id="tabPricingIndividuals" role="tabpanel">
+
+                    <p class="font-weight-bold mb-2">Choose license
+                      <a class="btn btn-info btn-sm px-2 waves-effect waves-light" target="_blank" href="https://mdbootstrap.com/license/" data-toggle="tooltip" data-placement="right" title="" data-trigger="hover" data-original-title="Not sure which license should you use? Click on this link to get more info."><i class="fa fa-question"></i></a>
+                    </p>
+
+                    <div class="variations text-center" cellspacing="0">
+
+                      
+                      <div class="variable_value mb-1 mt-2">
+
+                        <div id="individuals_radio" class="btn-group" data-toggle="buttons"><label name="license_variations" for="1 person &amp; 1 project" class="btn btn-info btn-rounded btn-md    waves-effect waves-light">1 person &amp; 1 project<input type="radio" name="options" autocomplete="off" id="1 person &amp; 1 project" value="1 person &amp; 1 project"><i class="fa fa-check right"></i> </label><label name="license_variations" for="1 person &amp; unlimited projects" class="btn btn-info btn-rounded btn-md   active waves-effect waves-light">1 person &amp; unlimited projects<input type="radio" name="options" autocomplete="off" id="1 person &amp; unlimited projects" checked="checked" value="1 person &amp; unlimited projects"><i class="fa fa-check right"></i> </label></div>
+                      </div>
+
+                      <div class="variable_name "></div>
+
+                      
+                    </div>
+
+                  </div>
+                  <!--/.Panel 1-->
+
+                  <!--Panel 2-->
+                  <div class="tab-pane fade" id="tabPricingTeams" role="tabpanel">
+
+                    <p class="font-weight-bold">Unlimited projects for teams</p>
+
+                    <div class="variations text-center" cellspacing="0">
+
+                      
+                      <div class="variable_value mb-1 mt-2">
+
+                        <div class="btn-group"><select id="teams_select" name="attribute_license" class="browser-default custom-select"><option name="options" id="1-3 people &amp; unlimited projects" value="1-3 people &amp; unlimited projects" class="attached enabled">1-3 people &amp; unlimited projects</option><option name="options" id="4-6 people &amp; unlimited projects" value="4-6 people &amp; unlimited projects" class="attached enabled">4-6 people &amp; unlimited projects</option><option name="options" id="7-9 people &amp; unlimited projects" value="7-9 people &amp; unlimited projects" class="attached enabled">7-9 people &amp; unlimited projects</option><option name="options" id="10-15 people &amp; unlimited projects" value="10-15 people &amp; unlimited projects" class="attached enabled">10-15 people &amp; unlimited projects</option><option name="options" id="15+ people &amp; unlimited projects" value="15+ people &amp; unlimited projects" class="attached enabled">15+ people &amp; unlimited projects</option></select></div>
+                      </div>
+
+                      <div class="variable_name "></div>
+
+                      
+                    </div>
+
+                  </div>
+                  <!--/.Panel 2-->
+
+                  <div class="variations text-center" cellspacing="0">
+
+                    
+                    <div class="variable_value mb-1 mt-2">
+
+                      
+                      <select id="license_dropdown" class="" name="attribute_license" data-attribute_name="attribute_license" style="display:none;">
+
+                        
+                        <option value="1 person &amp; 1 project" class="attached enabled">1 person &amp; 1 project</option>;
+
+                        
+                        <option value="1 person &amp; unlimited projects" class="attached enabled">1 person &amp; unlimited projects</option>;
+
+                        
+                        <option value="1-3 people &amp; unlimited projects" class="attached enabled">1-3 people &amp; unlimited projects</option>;
+
+                        
+                        <option value="4-6 people &amp; unlimited projects" class="attached enabled">4-6 people &amp; unlimited projects</option>;
+
+                        
+                        <option value="7-9 people &amp; unlimited projects" class="attached enabled">7-9 people &amp; unlimited projects</option>;
+
+                        
+                        <option value="10-15 people &amp; unlimited projects" class="attached enabled">10-15 people &amp; unlimited projects</option>;
+
+                        
+                        <option value="15+ people &amp; unlimited projects" class="attached enabled">15+ people &amp; unlimited projects</option>;
+
+                        
+                      </select>
+
+                      <script>
+                        jQuery("label[name='license_variations']").click(function() {
+                          var id = jQuery(this).attr("for");
+
+                          var $wcAddToCart = jQuery(".woocommerce-variation-add-to-cart");
+                          var $wcVariation = jQuery(".woocommerce-variation");
+
+                          $wcVariation.removeClass("white-text").show();
+                          $wcAddToCart.show();
+                          $wcAddToCart.parent().find(".custom-license-info").remove();
+
+                          jQuery("#license_dropdown").val( jQuery("input[id='"+id+"']").val() );
+                          jQuery("#license_dropdown").trigger("change");
+                        });
+
+                        jQuery("select#teams_select, select#individuals_select").change(function() {
+                          var value = jQuery(this).val();
+
+                          var $wcAddToCart = jQuery(".woocommerce-variation-add-to-cart");
+                          var $wcVariation = jQuery(".woocommerce-variation");
+
+                          if (value === "15+ people & unlimited projects") {
+
+                            $wcVariation.addClass("white-text").hide();
+                            $wcAddToCart.hide();
+                            $wcAddToCart.parent().find(".custom-license-info").remove();
+                            $wcAddToCart.after("<p class='custom-license-info'>In order to buy higher license please contact us at office@mdbootstrap.com</p>");
+                          } else {
+
+                            $wcVariation.removeClass("white-text").show();
+                            $wcAddToCart.show();
+                            $wcAddToCart.parent().find(".custom-license-info").remove();
+
+                            jQuery("#license_dropdown").val( value );
+                            jQuery("#license_dropdown").trigger("change");
+                          }
+                        });
+
+                        jQuery("#license-type-tabs").find("a").click(function() {
+
+                          var tabType = jQuery(this).attr("href");
+
+                          if (tabType === "#tabPricingIndividuals") {
+
+                            jQuery("#license_dropdown").val( jQuery("input[name='options']:checked").val() );
+                            jQuery("#license_dropdown").trigger("change");
+                          } else if (tabType === "#tabPricingTeams") {
+
+                            jQuery("#license_dropdown").val( jQuery("select#teams_select").val() );
+                            jQuery("#license_dropdown").trigger("change");
+                          }
+                        });
+                      </script>
+
+                    </div>
+
+                    <div class="variable_name "></div>
+
+                    
+                  </div>
+
+                </div>
+                <!-- Pills panels -->
+
+                
+                <div class="single_variation_wrap text-center" style="">
+                  <div class="woocommerce-variation single_variation">
+                   <div class="woocommerce-variation-description"></div>
+
+                   <div class="woocommerce-variation-price h3"><span class="price"><span class="woocs_price_code" data-product-id="8463"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">€</span>&nbsp;119</span></span></span></div>
+
+                   <div class="woocommerce-variation-availability"></div>
+                 </div><div class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-enabled">
+
+                  <section id="dynamicContentWrapper-promoCodes">
+                  </section>
+
+                  
+                  <p class="my-3">One-time fee. Lifetime license. Unlimited and free updates.</p>
+                  
+                  <button type="submit" class="single_add_to_cart_button button alt btn btn-dark-green waves-effect waves-light">Add to cart <i class="fa fa-cart-plus ml-1"></i></button>
+                  <input id="pro-jumbotron-addTo" type="hidden" name="add-to-cart" value="8460">
+                  <input type="hidden" name="product_id" value="8460">
+                  <input type="hidden" name="variation_id" class="variation_id" value="8463">
+
+                  
+                  <a id="pro-jumbotron-preview" type="button" href="https://mdbootstrap.com/components/" class="btn btn-info btn-md waves-effect waves-light">Live Preview <i class="fa fa-eye ml-1"></i></a>
+                  
+                </div>
+              </div>
+
+              <input type="hidden" name="gtm4wp_id" value="8460">
+              <input type="hidden" name="gtm4wp_name" value="Material Design for Bootstrap 4 Pro (jQuery version [standard Bootstrap] )">
+              <input type="hidden" name="gtm4wp_sku" value="8460">
+              <input type="hidden" name="gtm4wp_category" value="Uncategorized">
+              <input type="hidden" name="gtm4wp_price" value="79">
+              <input type="hidden" name="gtm4wp_currency" value="EUR">
+              
+              
+            </form>
+
+            <div class="product_meta">
+
+             
+             
+              <span class="sku_wrapper">SKU: <span class="sku">N/A</span></span>
+
+              
+              <span class="posted_in">Category: <a href="https://mdbootstrap.com/product-category/uncategorized/" rel="tag">Uncategorized</a></span>
+              
+              
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </section>
+      <!--Section: Intro-->
+
+      <input type="hidden" name="gtm4wp_id" value="8460">
+      <input type="hidden" name="gtm4wp_name" value="Material Design for Bootstrap 4 Pro (jQuery version [standard Bootstrap] )">
+      <input type="hidden" name="gtm4wp_sku" value="8460">
+      <input type="hidden" name="gtm4wp_category" value="Uncategorized">
+      <input type="hidden" name="gtm4wp_price" value="79">
+      <input type="hidden" name="gtm4wp_currency" value="EUR">
+      <!--    </form> -->
+
+      
+      <!--Section: Page content-->
+      <section>
+
+        <!-- Additional grid for additional, responsive margins -->
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-12">
+
+            <!--Section: Logotypes-->
+            <section class="my-4 text-center">
+              <!--Section: Logotypes-->
+              <section class="mt-4">
+
+                <h5 class="my-4">Need Help ?</h5>
+                <a id="pro-content-question" class="btn btn-outline-info btn-lg waves-effect waves-light" data-toggle="modal" data-target="#contactForm">Question? Write to us!
+                <i class="fa fa-envelope ml-1"></i>
+                </a>
+                <a id="pro-content-buy" class="btn btn-info btn-lg waves-effect waves-light" href="#mdb-cta">Buy now
+                  <i class="fa fa-cart-plus ml-1"></i>
+                </a>
+              </section>
+              <!--/Section: Logotypes-->
+          </section>
+          <!--Section: Logotypes-->
+
+
+          <hr class="my-5">
+
+
+          <!--Section: Gallery-->
+          <section>
+            <!--Second gallery-->
+            <div class="row">
+              <div class="col-md-12">
+                <!--Carousel Wrapper-->
+                <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+                    <!--Controls-->
+                    <div class="controls-top">
+                        <a class="btn-floating" href="javascript:void(0)" data-target="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+                        <a class="btn-floating" href="javascript:void(0)" data-target="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+                    </div>
+                    <!--/.Controls-->
+
+                    <!--Indicators-->
+                    <ol class="carousel-indicators">
+                        <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+                        <li data-target="#multi-item-example" data-slide-to="1"></li>
+                        <li data-target="#multi-item-example" data-slide-to="2"></li>
+                    </ol>
+                    <!--/.Indicators-->
+
+                    <!--Slides-->
+                    <div class="carousel-inner" role="listbox">
+
+                        <!--First slide-->
+                        <div class="carousel-item active">
+
+                            <div class="col-md-4">
+                                <div class="card mb-2">
+                                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Card title</h4>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <a class="btn btn-primary">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 clearfix d-none d-md-block">
+                                <div class="card mb-2">
+                                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Card title</h4>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <a class="btn btn-primary">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 clearfix d-none d-md-block">
+                                <div class="card mb-2">
+                                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Card title</h4>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <a class="btn btn-primary">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--/.First slide-->
+
+                        <!--Second slide-->
+                        <div class="carousel-item">
+
+                            <div class="col-md-4">
+                                <div class="card mb-2">
+                                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Card title</h4>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <a class="btn btn-primary">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 clearfix d-none d-md-block">
+                                <div class="card mb-2">
+                                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Card title</h4>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <a class="btn btn-primary">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 clearfix d-none d-md-block">
+                                <div class="card mb-2">
+                                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Card title</h4>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <a class="btn btn-primary">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--/.Second slide-->
+
+                        <!--Third slide-->
+                        <div class="carousel-item">
+
+                            <div class="col-md-4">
+                                <div class="card mb-2">
+                                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(53).jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Card title</h4>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <a class="btn btn-primary">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 clearfix d-none d-md-block">
+                                <div class="card mb-2">
+                                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(45).jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Card title</h4>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <a class="btn btn-primary">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 clearfix d-none d-md-block">
+                                <div class="card mb-2">
+                                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(51).jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Card title</h4>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <a class="btn btn-primary">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--/.Third slide-->
+
+                    </div>
+                    <!--/.Slides-->
+
+                </div>
+                <!--/.Carousel Wrapper-->
+              </div>
+            </div>
+            <!--/Second gallery-->
+          </section>
+          <!--Section: Gallery-->
+
+          <hr class="my-5">
+
+        </div>
+      </div>
+      <!-- Additional grid for additional, responsive margins -->
+
+    </section>
+    <!--Section: Page content-->
+  </div>
+
+  
+  
+  
+</div>
+
+</main>
+<!--/Main layout-->
+
+
+

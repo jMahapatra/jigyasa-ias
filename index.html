@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="jigyasa">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap Template</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+	<link rel='stylesheet' id='compiled.css-css'  href='https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/compiled-4.5.8.min.css?ver=4.5.8' type='text/css' media='all' />
+
+<style type="text/css">
+    .scrollbar
+    {
+      /*margin-left: 30px;*/
+      float: left;
+      /*height: 300px;*/
+      width: -webkit-fill-available;
+      /*background: #F5F5F5;*/
+      overflow-y: scroll;
+      margin-bottom: 25px;
+    }
+
+    .sidenav-scrollbar::-webkit-scrollbar-track
+    {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      border-radius: 10px;
+      background-color: #7d7c7c;
+    }
+
+    .sidenav-scrollbar::-webkit-scrollbar
+    {
+      width: 12px;
+      background-color: #7d7c7c;
+    }
+
+    .sidenav-scrollbar::-webkit-scrollbar-thumb
+    {
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,.3);
+      background-color: #555;
+    }
+</style>
+
+</head>
+
+<body class="fixed-sn white-skin" >
+
+    <!--Double navigation-->
+    <header>
+        
+        <!-- Sidebar navigation -->
+        <div id="slide-out" class="side-nav sn-bg-4 fixed">
+            <ul class="scrollbar sidenav-scrollbar">
+                <!-- Logo -->
+                <li>
+                    <div class="logo-wrapper waves-light">
+                        <a href="#"><img src="image/logo-new-small.png" class="img-fluid flex-center"></a>
+                    </div>
+                </li>
+                <!--/. Logo -->
+                <!--Social-->
+                <li>
+                    <ul class="social waves-light">
+                        <li><a href="#" class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a></li>
+                        <li><a href="#" class="icons-sm pin-ic"><i class="fa fa-pinterest"> </i></a></li>
+                        <li><a href="#" class="icons-sm gplus-ic"><i class="fa fa-google-plus"> </i></a></li>
+                        <li><a href="#" class="icons-sm tw-ic"><i class="fa fa-twitter"> </i></a></li>
+                    </ul>
+                </li>
+                <!--/Social-->
+                
+                <!-- Side navigation links -->
+                <li class="" style="border-bottom: 1px solid rgba(109, 105, 105, 0.25);">
+                    <ul class="collapsible collapsible-accordion">
+                        <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-file-text-o"></i> IAS Guide<i class="fa fa-angle-down rotate-icon"></i></a>
+                            <div class="collapsible-body">
+                                <ul class="list-unstyled">
+                                    <li><a href="#" class="hide-sidenav waves-effect">About IAS</a>
+                                    </li>
+                                    <li><a href="#" class="hide-sidenav waves-effect">Prelims</a>
+                                    </li>
+                                    <li><a href="#" class="hide-sidenav waves-effect">Mains</a>
+                                    </li>
+                                    <li><a href="#" class="hide-sidenav waves-effect">Interview</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a class="hide-sidenav collapsible-header waves-effect arrow-r"><i class="fa fa-file-text-o"></i> Recent Updates</a>
+                           
+                        </li>
+                        <li><a class="hide-sidenav collapsible-header waves-effect arrow-r"><i class="fa fa-download"></i> Downloads</a>
+                           
+                        </li>
+                        <li><a class="hide-sidenav collapsible-header waves-effect arrow-r"><i class="fa fa-book"></i> Important Books List</a>
+                            
+                        </li>
+                    </ul>
+                </li> 
+
+                <li style="border-bottom: 1px solid rgba(109, 105, 105, 0.25);">
+                    <ul class="collapsible collapsible-accordion">
+                        <li><a href="#!/current-affairs" class="hide-sidenav collapsible-header waves-effect arrow-r"><i class="fa fa-file-text-o"></i> Daily Current Affairs</a>
+                            
+                        </li> 
+                        <li><a class="hide-sidenav collapsible-header waves-effect arrow-r"><i class="fa fa-newspaper-o"></i> Article Of The Day</a>
+                            
+                        </li> 
+                        <li><a class="hide-sidenav collapsible-header waves-effect arrow-r"><i class="fa fa-file-text-o"></i> Answer Writing Challenge</a>
+                            
+                        </li>
+                        <li><a class="hide-sidenav collapsible-header waves-effect arrow-r"><i class="fa fa-file-text-o"></i> Daily Study Programme<i class="fa fa-angle-down rotate-icon"></i></a>
+                            <div class="collapsible-body">
+                                <ul class="list-unstyled">
+                                    <li><a href="#" class="hide-sidenav waves-effect">10 Days Study Plan</a>
+                                    </li>
+                                    <li><a href="#" class="hide-sidenav waves-effect">Daily Study Strategy</a>
+                                    </li>                    
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+                <li style="border-bottom: 1px solid rgba(109, 105, 105, 0.25);">
+                    <ul class="collapsible collapsible-accordion">
+                        <li><a class="hide-sidenav collapsible-header waves-effect arrow-r"><i class="fa fa-file-text-o"></i> Free Daily CA Tests</a>
+                            
+                        </li>
+                        <li><a href="#!/prelims-test-series" class="hide-sidenav collapsible-header waves-effect arrow-r"><i class="fa fa-file-text-o"></i> Prelims Test Series</a>
+                           
+                        </li>
+                        <li><a class="hide-sidenav collapsible-header waves-effect arrow-r"><i class="fa fa-file-text-o"></i> Mains Test Series</a>
+                            
+                        </li>
+                    </ul>
+                </li> 
+
+                <li>
+                    <ul class="collapsible collapsible-accordion">       
+                        <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-question-circle-o"></i> Help & Support<i class="fa fa-angle-down rotate-icon"></i></a>
+                            <div class="collapsible-body">
+                                <ul class="list-unstyled">
+                                    <li><a href="#" class="hide-sidenav waves-effect">Feedback</a>
+                                    </li>
+                                    <li><a href="#" class="hide-sidenav waves-effect">FAQ</a>
+                                    </li>
+                                    <li><a href="#" class="hide-sidenav waves-effect">Chat</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a class="hide-sidenav collapsible-header waves-effect arrow-r"><i class="fa fa-file-text-o"></i> Contact</a>
+                            
+                        </li>
+                         <li><a class="hide-sidenav collapsible-header waves-effect arrow-r"><i class="fa fa-power-off"></i> Sign In/Register
+                         </a>
+                           
+                        </li>
+                    </ul>
+                </li>
+                <!--/. Side navigation links -->
+            </ul>
+            <div class="sidenav-bg mask-strong"></div>
+        </div>
+        <!--/. Sidebar navigation -->
+
+        <!-- Navbar -->
+        <nav class="navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav" >
+            <!-- SideNav slide-out button -->
+            <div class="float-left">
+                <a style="color:#117db1;" href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a>
+            </div>
+            <!-- Breadcrumb-->
+            <div class="breadcrumb-dn mr-auto">
+                <!--<p>jIgyASa IAS</p>-->
+                <a href="#"><img src="image/logo-new-small.png" style="max-width: 120px;" class="img-fluid flex-center"></a>
+            </div>
+            <ul class="nav navbar-nav nav-flex-icons ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link"><i class="fa fa-envelope"></i> <span class="clearfix d-none d-sm-inline-block">Contact</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"><i class="fa fa-comments-o"></i> <span class="clearfix d-none d-sm-inline-block">Support</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"><i class="fa fa-user"></i> <span class="clearfix d-none d-sm-inline-block">Account</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.Navbar -->
+        <div class="card card-intro sky-gradient">
+              <div class="card-body white-text rgba-black-light text-center">
+               <!--Grid row-->
+               <div class="row d-flex justify-content-center">
+                 <!--Grid column-->
+                 <div class="col-md-6">
+                  <h1 class="font-weight-bold h3">jIgyASa - The Curious Minds</h1>
+                  <h5 class="">An Initiative By IIT, IIM Alumni</h5>
+                </div>
+                <!--Grid column-->
+              </div>
+              <!--Grid row-->
+            </div>
+        </div>
+    </header>
+		
+    <!--/.Double navigation-->
+    
+    <!--Main layout-->
+    <div ng-view></div>
+    <!--/Main layout-->
+
+    <!--Footer-->
+    <footer class="page-footer mdb-color darken-3 text-center text-md-left pt-4" style="z-index: 3; position: relative;">
+
+        <!--Footer Links-->
+        <div class="container-fluid">
+            <div class="row">
+
+                <!--First column-->
+                <div class="col-md-3">
+                    <h5 class="text-uppercase font-weight-bold mb-4">Footer Content</h5>
+                    <p>Here you can use rows and columns here to organize your footer content.</p>
+                </div>
+                <!--/.First column-->
+
+                <hr class="w-100 clearfix d-md-none">
+
+                <!--Second column-->
+                <div class="col-md-2 mx-auto">
+                    <h5 class="text-uppercase font-weight-bold mb-4">Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#!">Link 1</a></li>
+                        <li><a href="#!">Link 2</a></li>
+                        <li><a href="#!">Link 3</a></li>
+                        <li><a href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+                <!--/.Second column-->
+
+                <hr class="w-100 clearfix d-md-none">
+
+                <!--Third column-->
+                <div class="col-md-2 mx-auto">
+                    <h5 class="text-uppercase font-weight-bold mb-4">Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#!">Link 1</a></li>
+                        <li><a href="#!">Link 2</a></li>
+                        <li><a href="#!">Link 3</a></li>
+                        <li><a href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+                <!--/.Third column-->
+
+                <hr class="w-100 clearfix d-md-none">
+
+                <!--Fourth column-->
+                <div class="col-md-2 mx-auto">
+                    <h5 class="text-uppercase font-weight-bold mb-4">Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#!">Link 1</a></li>
+                        <li><a href="#!">Link 2</a></li>
+                        <li><a href="#!">Link 3</a></li>
+                        <li><a href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+                <!--/.Fourth column-->
+
+            </div>
+        </div>
+        <!--/.Footer Links-->
+
+
+        <hr>
+
+        <!--Social buttons-->
+        <div class="social-section text-center">
+            <ul class="list-unstyled list-inline">
+                <li class="list-inline-item"><a class="btn-floating btn-fb"><i class="fa fa-facebook"> </i></a></li>
+                <li class="list-inline-item"><a class="btn-floating btn-tw"><i class="fa fa-twitter"> </i></a></li>
+                <li class="list-inline-item"><a class="btn-floating btn-gplus"><i class="fa fa-google-plus"> </i></a></li>
+                <li class="list-inline-item"><a class="btn-floating btn-li"><i class="fa fa-linkedin"> </i></a></li>
+                <li class="list-inline-item"><a class="btn-floating btn-git"><i class="fa fa-github"> </i></a></li>
+            </ul>
+        </div>
+        <!--/.Social buttons-->
+
+        <!--Copyright-->
+        <div class="footer-copyright py-3 text-center">
+            <div class="container-fluid">
+                © 2018 Copyright: <a href="http://www.MDBootstrap.com"> MDBootstrap.com </a>
+
+            </div>
+        </div>
+        <!--/.Copyright-->
+
+    </footer>
+    <!--/.Footer-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+
+    <!-- Tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+
+
+
+    <!-- Angular min JS 1.6.10 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+
+    <!-- Angular Route JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular-route.min.js"></script>
+
+    <!-- Config JS -->
+    <script src="angular/js/config.js"></script>
+
+    <!-- APP JS -->
+    <script src="angular/js/app.js"></script>
+
+
+    <script> 
+    $(function(){
+        $(".hide-sidenav").click(function(e){
+            $("#sidenav-overlay").click()
+        });
+        
+      // Other Page Include Script
+      // var includes = $('[data-include]');
+      // jQuery.each(includes, function(){
+      //   var file = 'includes/' + $(this).data('include') + '.html';
+      //   console.log('include value: '+ file)
+      //   $(this).load(file);
+      // });
+    });
+    </script>
+
+    <script> 
+    $(function(){
+      // SideNav Initialization
+      $(".button-collapse").sideNav();
+      new WOW().init();
+
+    });
+    </script>
+    
+    <script>
+        $(function () {
+            $(".sticky").sticky({
+                topSpacing: 60,
+                zIndex: 2
+            });
+        });
+        $('body').scrollspy({
+            target: '#scrollspy'
+        })
+    </script>
+
+</body>
+
+</html>

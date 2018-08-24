@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script> 
+    $(function(){
+      var includes = $('[data-include]');
+
+      jQuery.each(includes, function(){
+        var file = 'includes/' + $(this).data('include') + '.html';
+        console.log('include value: '+ file)
+        $(this).load(file);
+      });
+    });
+    </script> 
+  </head> 
+
+  <body> 
+     <div data-include="sidenav"></div>
+     <div data-include="navbar"></div>
+  </body> 
+</html>

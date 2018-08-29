@@ -69,10 +69,7 @@
                         <a href="#"><img src="image/logo-new-small.png" class="img-fluid flex-center"></a>
                     </div>
                 </li>
-                <li>
-                    <div data-network="twitter" class="btn btn-tw btn-sm share-button">Twitter</div>
-                    <div data-network="facebook" class="btn btn-fb btn-sm share-button">Facebook</div> 
-                </li>
+                
                 <!--/. Logo -->
                 <!--Social-->
                 <li>
@@ -352,7 +349,7 @@
     <!-- APP JS -->
     <script src="angular/js/app.js"></script>
 
-    <script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5a2a425f8c8f3c0013a0202a&product=custom-share-buttons"></script>
+    
     <script> 
     $(function(){
         $(".hide-sidenav").click(function(e){
@@ -368,21 +365,7 @@
       // });
     });
     </script>
-    <script type="text/javascript">
-        (function(document) {
-           var shareButtons = document.querySelectorAll(".share-button[data-network]");
-           for(var i = 0; i < shareButtons.length; i++) {
-              var shareButton = shareButtons[i];
-              
-              shareButton.addEventListener("click", function(e) {
-                 var elm = e.target;
-                 var network = elm.dataset.network;
-                 
-                 console.log("share click: " + network);
-              });
-           }
-        })(document);
-    </script>
+    
     <script> 
     $(function(){
       // SideNav Initialization

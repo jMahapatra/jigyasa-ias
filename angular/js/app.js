@@ -15,10 +15,10 @@ app.config(function($routeProvider){
         templateUrl: 'views/ias-mains.html'
     })
     .when('/interview', {
-        templateUrl: 'views/interview.html'
+        templateUrl: 'views/about-interview.html'
     })
-    .when('/recent-updates', {
-        templateUrl: 'views/recent-updates.html',
+    .when('/latest-updates', {
+        templateUrl: 'views/latest-updates.html',
     })
     .when('/downloads', {
         templateUrl: 'views/downloads.html',

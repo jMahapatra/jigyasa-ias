@@ -1,0 +1,91 @@
+<!--Main layout-->
+    <main class="pt-3">
+        <div class="container-fluid">
+            <div class="row">
+
+    <div class="container text-center">
+
+
+        <!--Section: Forms-->
+        <section>
+
+
+            <!--Grid row-->
+            <div class="row mt-1 mb-5">
+
+                <!--Grid column-->
+                <div class="col-lg-5 col-md-6 m-auto mb-4">
+
+                    <section class="form-elegant">
+
+                        <!--Form without header-->
+                        <div class="card">
+
+                            <div class="card-body mx-4">
+
+                                <!--Header-->
+                                <div class="text-center">
+                                    <h3 class="dark-grey-text mb-2">
+                                        <strong>Sign in</strong>
+                                    </h3>
+                                </div>
+								
+								<form name="login-form" ng-submit="vm.login()" role="form">
+	                                <!--Body-->
+	                                <div class="md-form" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
+	                                    <input type="text" id="email" ng-model="vm.email" required class="form-control invalid">
+	                                    <label for="Form-email1">Your email</label>
+	                                    
+	                                </div>
+
+	                                <div class="md-form" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+	                                    <input type="password" id="Form-pass1" class="form-control invalid">
+	                                    <label for="Form-pass1">Your password</label>
+	                                </div>
+	                                <p class="font-small blue-text d-flex justify-content-end">Forgot
+                                        <a href="#" class="blue-text ml-1"> Password?</a>
+                                    </p>
+                                    <p class="font-small grey-text d-flex justify-content-end">Not a member?
+	                                    <a href="#" class="blue-text ml-1"> Sign Up</a>
+	                                </p>
+								</form>
+
+                                <div class="text-center mb-1">
+                                    <button type="button" class="btn blue-gradient btn-block btn-rounded z-depth-1a waves-effect waves-light">Sign in</button>
+                                </div>
+
+                                <p class="font-small dark-grey-text text-right d-flex justify-content-center mb-1 pt-1"> or Sign in with:</p>
+
+                                <div class="row d-flex justify-content-center">
+                                	<!--Facebook-->
+									<a type="button" class="btn-floating btn-md btn-fb"><i class="fa fa-facebook"></i></a>
+									<!--Twitter-->
+									<a type="button" class="btn-floating btn-md btn-tw"><i class="fa fa-twitter"></i></a>
+									<!--Google +-->
+									<a type="button" class="btn-floating btn-md btn-gplus"><i class="fa fa-google-plus"></i></a>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!--/Form without header-->
+
+                    </section>
+
+                </div>
+                <!--Grid column-->
+
+            </div>
+            <!--Grid row-->
+
+            
+
+        </section>
+        <!--Section: Forms-->
+
+
+        </div>
+
+            </div>
+        </div>
+    </main>

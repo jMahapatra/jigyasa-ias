@@ -104,44 +104,8 @@
                                 <!--Card content-->
                                 <div class="card-body card-body-cascade text-center">
                                     <div class="list-group mb-3">
-                                        <a href="#!downloads" class="list-group-item d-flex justify-content-between">
-                                            <span>Magazine - The Jigyasa Weekly 20 Aug to 25 Aug</span>
-                                            <span>
-                                                <i class="fa fa-chevron-circle-right ml-2"></i>
-                                            </span>
-                                        </a>
-                                        <a href="#!downloads" class="list-group-item d-flex justify-content-between">
-                                            <span>Prelims 2019 - Test Series - Schedule, Syllabus, Refrences</span>
-                                            <span>
-                                                <i class="fa fa-chevron-circle-right ml-2"></i>
-                                            </span>
-                                        </a>
-                                        <a href="#!downloads" class="list-group-item d-flex justify-content-between">
-                                            <span>Mains 2018_Test Series II_Schedule, Syllabus, References</span>
-                                            <span>
-                                                <i class="fa fa-chevron-circle-right ml-2"></i>
-                                            </span>
-                                        </a>
-                                        <a href="#!downloads" class="list-group-item d-flex justify-content-between">
-                                            <span>Magazine - The Jigyasa Weekly 12 Aug to 19 Aug</span>
-                                            <span>
-                                                <i class="fa fa-chevron-circle-right ml-2"></i>
-                                            </span>
-                                        </a>
-                                        <a href="#!downloads" class="list-group-item d-flex justify-content-between">
-                                            <span>How to use maps to study geography effectively for civil service examination</span>
-                                            <span>
-                                                <i class="fa fa-chevron-circle-right ml-2"></i>
-                                            </span>
-                                        </a>
-                                        <a href="#!downloads" class="list-group-item d-flex justify-content-between">
-                                            <span>Test Series - Information Brochure</span>
-                                            <span>
-                                                <i class="fa fa-chevron-circle-right ml-2"></i>
-                                            </span>
-                                        </a>
-                                        <a href="#!downloads" class="list-group-item d-flex justify-content-between">
-                                            <span>Download Government Welfare Schemes</span>
+                                        <a ng-repeat="download in downloads" href="#!downloads" class="list-group-item d-flex justify-content-between">
+                                            <span ng-bind="download._Heading"></span>
                                             <span>
                                                 <i class="fa fa-chevron-circle-right ml-2"></i>
                                             </span>
@@ -287,6 +251,7 @@
                             <div class="card">
                                 <!--Card image-->
                                 <div class="view overlay">
+                                    <!-- <img src="image/rawpixel-596096-unsplash.jpg" class="img-fluid" alt="Dailt Study Programme"> -->
                                     <img src="https://mdbootstrap.com/img/Marketing/free/main/angular/mdb-angular-free.jpg" class="img-fluid" alt="Dailt Study Programme">
                                     <a id="home-resources-mdb-story" href="javascript:void(0)">
                                         <div class="mask rgba-white-slight waves-effect waves-light"></div>
@@ -349,11 +314,8 @@
                     <h2 class="h1-responsive font-weight-bold text-center my-5">Join Best Packages</h2>
                     <!--Grid row-->
                     <div class="row my-4 wow fadeIn text-center" style="visibility: visible; animation-name: fadeIn;">
-                        <!--Grid column-->
-                        <div class="col-lg-4 col-md-12 mb-4">
-                            <!--Card-->
+                        <div class="col-lg-4 col-md-12 mb-4" ng-repeat="package in packages">
                             <div class="card">
-                                <!--Card image-->
                                 <div class="view overlay">
                                     <img src="https://mdbootstrap.com/img/Marketing/mdb-press-pack/mdb-angular.jpg" class="card-img-top" alt="">
                                     <a href="https://mdbootstrap.com/angular/" target="_blank">
@@ -361,29 +323,19 @@
                                     </a>
                                 </div>
 
-                                <!--Card content-->
                                 <div class="card-body">
-                                    <!--Title-->
-                                    <h4 class="card-title">Prelims 2019 Master Series</h4>
-                                    <!--Text-->
-                                    <p class="card-text">Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-                                    <h2 class="my-2 teal-text"><i class="fa fa-inr"></i> 7400.00</h2>
+                                    <h4 class="card-title" ng-bind="package._SeriesName"></h4>
+                                    <p class="card-text" ng-bind="package._Description"></p>
+                                    <h2 class="my-2 teal-text"><i class="fa fa-inr"></i> {{package._Price | currency : '' : 2}}</h2>
                                     <a href="#!package-detail" class="btn blue-gradient btn-md waves-effect waves-light">View Syllabus
                                         <i class="fa fa-chevron-right ml-2"></i>
                                     </a>
                                 </div>
                             </div>
-                            <!--/.Card-->
                         </div>
-                        <!--Grid column-->
 
-                        <!--Grid column-->
-                        <div class="col-lg-4 col-md-6 mb-4">
-
-                            <!--Card-->
+                        <!-- <div class="col-lg-4 col-md-6 mb-4">
                             <div class="card">
-
-                                <!--Card image-->
                                 <div class="view overlay">
                                     <img src="https://mdbootstrap.com/img/Marketing/mdb-press-pack/mdb-react.jpg" class="card-img-top" alt="">
                                     <a href="https://mdbootstrap.com/react/" target="_blank">
@@ -391,30 +343,19 @@
                                     </a>
                                 </div>
 
-                                <!--Card content-->
                                 <div class="card-body">
-                                    <!--Title-->
                                     <h4 class="card-title">General Studies 2019</h4>
-                                    <!--Text-->
-                                    <p class="card-text">Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                                    <p class="card-text">Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam. perspiciatis unde omnis</p>
                                     <h2 class="my-2 teal-text"><i class="fa fa-inr"></i> 6800.00</h2>
                                     <a href="#!package-detail" class="btn blue-gradient btn-md waves-effect waves-light">View Syllabus
                                         <i class="fa fa-chevron-right ml-2"></i>
                                     </a>
                                 </div>
-
                             </div>
-                            <!--/.Card-->
                         </div>
-                        <!--Grid column-->
 
-                        <!--Grid column-->
                         <div class="col-lg-4 col-md-6 mb-4">
-
-                            <!--Card-->
                             <div class="card">
-
-                                <!--Card image-->
                                 <div class="view overlay">
                                     <img src="https://mdbootstrap.com/img/Marketing/mdb-press-pack/mdb-vue.jpg" class="card-img-top" alt="">
                                     <a href="https://mdbootstrap.com/vue/" target="_blank">
@@ -422,43 +363,30 @@
                                     </a>
                                 </div>
 
-                                <!--Card content-->
                                 <div class="card-body">
-                                    <!--Title-->
                                     <h4 class="card-title">Current Affairs Series 2019</h4>
-                                    <!--Text-->
                                     <p class="card-text">Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
                                     <h2 class="my-2 teal-text"><i class="fa fa-inr"></i> 2200.00</h2>
                                     <a href="#!package-detail" class="btn blue-gradient btn-md waves-effect waves-light">View Syllabus
                                         <i class="fa fa-chevron-right ml-2"></i>
                                     </a>
                                 </div>
-
                             </div>
-                            <!--/.Card-->
-
-                        </div>
-                        <!--Grid column-->
+                        </div> -->
                     </div>
                     <!--Grid row-->
                     <!--Grid row-->
-                    <div class="row mb-4 wow fadeIn text-center" style="visibility: visible; animation-name: fadeIn;">
-                        <!--Grid column-->
+                    <!-- <div class="row mb-4 wow fadeIn text-center" style="visibility: visible; animation-name: fadeIn;">
                         <div class="col-lg-4 col-md-6 mb-4">
-                            <!--Card-->
                             <div class="card">
-                                <!--Card image-->
                                 <div class="view overlay">
                                     <img src="https://mdbootstrap.com/wp-content/uploads/2017/11/brandflow-tutorial-fb.jpg" class="card-img-top" alt="">
                                     <a href="https://mdbootstrap.com/automated-app-start/" target="_blank">
                                         <div class="mask rgba-white-slight waves-effect waves-light"></div>
                                     </a>
                                 </div>
-                                <!--Card content-->
                                 <div class="card-body">
-                                    <!--Title-->
                                     <h4 class="card-title">CSAT Test Series 2019</h4>
-                                    <!--Text-->
                                     <p class="card-text">Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
                                     <h2 class="my-2 teal-text"><i class="fa fa-inr"></i> 1900.00</h2>
                                     <a href="#!package-detail" class="btn blue-gradient btn-md waves-effect waves-light">View Syllabus
@@ -466,26 +394,18 @@
                                     </a>
                                 </div>
                             </div>
-                            <!--/.Card-->
                         </div>
-                        <!--Grid column-->
 
-                        <!--Grid column-->
                         <div class="col-lg-4 col-md-6 mb-4">
-                            <!--Card-->
                             <div class="card">
-                                <!--Card image-->
                                 <div class="view overlay">
                                     <img src="https://mdbootstrap.com/wp-content/uploads/2018/01/push-fb.jpg" class="card-img-top" alt="">
                                     <a href="https://mdbootstrap.com/web-push-start/" target="_blank">
                                         <div class="mask rgba-white-slight waves-effect waves-light"></div>
                                     </a>
                                 </div>
-                                <!--Card content-->
                                 <div class="card-body">
-                                    <!--Title-->
                                     <h4 class="card-title">DTSP Test series</h4>
-                                    <!--Text-->
                                     <p class="card-text">Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
                                     <h2 class="my-2 teal-text"><i class="fa fa-inr"></i> 2000.00</h2>
                                     <a href="#!package-detail" class="btn blue-gradient btn-md waves-effect waves-light">View Syllabus
@@ -493,16 +413,10 @@
                                     </a>
                                 </div>
                             </div>
-                            <!--/.Card-->
                         </div>
-                        <!--Grid column-->
-                        <!--Grid column-->
+
                         <div class="col-lg-4 col-md-6 mb-4">
-
-                            <!--Card-->
                             <div class="card">
-
-                                <!--Card image-->
                                 <div class="view overlay">
                                     <img src="https://mdbootstrap.com/img/Marketing/mdb-press-pack/mdb-react.jpg" class="card-img-top" alt="">
                                     <a href="https://mdbootstrap.com/react/" target="_blank">
@@ -510,24 +424,17 @@
                                     </a>
                                 </div>
 
-                                <!--Card content-->
                                 <div class="card-body">
-                                    <!--Title-->
                                     <h4 class="card-title">Mains 2019 Master Series</h4>
-                                    <!--Text-->
                                     <p class="card-text">Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
                                     <h2 class="my-2 teal-text"><i class="fa fa-inr"></i> 14500.00</h2>
                                     <a href="#!package-detail" class="btn blue-gradient btn-md waves-effect waves-light">View Syllabus
                                         <i class="fa fa-chevron-right ml-2"></i>
                                     </a>
                                 </div>
-
                             </div>
-                            <!--/.Card-->
-
                         </div>
-                        <!--Grid column-->
-                    </div>
+                    </div> -->
                     <!--Grid row-->
                 </section>
 
@@ -548,18 +455,18 @@
                             <div class="single-news mb-lg-0 mb-4">
                                 <!-- Image -->
                                 <div class="view overlay rounded z-depth-1-half mb-4">
-                                    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Slides/1.jpg" alt="Sample image">
-                                    <a>
+                                    <img class="img-fluid" ng-src="{{newsImgLocation}}{{todayaffair._Image}}" alt="Sample image">
+                                    <a href="#!current-affairs-full/{{todayaffair._NewsId}}">
                                         <div class="mask rgba-white-slight waves-effect waves-light"></div>
                                     </a>
                                 </div>
                                 <!-- Data -->
                                 <div class="news-data d-flex justify-content-between">
-                                  <a href="#!" class="deep-orange-text"><h6 class="font-weight-bold"><i class="fa fa-cutlery pr-2"></i>Culinary</h6></a>
-                                  <p class="font-weight-bold dark-grey-text"><i class="fa fa-calendar pr-2"></i>31 Aug, 2018</p>
+                                  <a href="#!" class="deep-orange-text"><h6 class="small">Culinary</h6></a>
+                                  <p class="font-weight-bold dark-grey-text"><i class="fa fa-calendar pr-2"></i> {{todayaffair._PublishDate | date:'dd MMM, yyyy'}}</p>
                                 </div>
                                 <!-- Excerpt -->
-                                <h3 class="h3-responsive font-weight-bold mb-3"><a href="#!current-affairs-full" class="green-text">Title of the news</a></h3>
+                                <h3 class="h3-responsive font-weight-bold mb-3"><a href="#!current-affairs-full/{{todayaffair._NewsId}}" class="green-text" ng-bind="todayaffair._Heading | trusted"></a></h3>
                                 <p class="dark-grey-text mb-lg-0 mb-md-5 mb-4">Sed ut perspiciatis unde voluptatem omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae explicabo. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
                             </div>
                             <!-- Featured news -->
@@ -569,24 +476,24 @@
                         <!-- Grid column -->
                         <div class="col-lg-6 col-md-12">
                             <!-- Small news -->
-                            <div class="single-news mt-2">
+                            <div class="single-news mt-2" ng-repeat="pastaffair in pastaffairs">
                                 <div class="row">
                                     <!-- Title -->
                                     <div class="d-flex justify-content-between">
                                         <div class="col-4 col-lg-3 pt-1">
                                             <div class="view overlay rounded z-depth-1 mb-md-0 mb-4">
-                                                  <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/img%20(29).jpg" alt="Sample image">
+                                                  <img class="img-fluid" ng-src="{{newsImgLocation}}{{pastaffair._Image}}" alt="Sample image">
                                                   <a>
                                                     <div class="mask rgba-white-slight waves-effect waves-light"></div>
                                                 </a>
                                             </div>
                                         </div>
                                         <div class="col-8 col-lg-9 pl-0 small">
-                                            <a class="font-weight-bold d-block green-text">Indian Economy and issues relating to planning , growth , development and employment</a>
+                                            <a href="#!current-affairs-full/{{pastaffair._NewsId}}" class="font-weight-bold d-block green-text" ng-bind="pastaffair._Heading | trusted"></a>
                                             <p class="dark-grey-text d-none d-sm-block text-justify">Reserve Bank of India’s second annual report since demonetization reveals that 99.3% of currencynotes that were demonetized at midnight on November 8, 2016 have returned to the banking system.</p>
                                             <div class="d-flex justify-content-between">
                                                 <a class="#!"><span class="pink-text font-weight-bold"><i class="fa fa-camera pr-2" aria-hidden="true"></i>Adventure</span></a>
-                                                <p class="dark-grey-text"><i class="fa fa-calendar"></i> 30 Aug, 2018</p>
+                                                <p class="dark-grey-text"><i class="fa fa-calendar"></i> {{pastaffair._PublishDate | date:'dd MMM, yyyy'}}</p>
                                             </div>
                                         </div>
 
@@ -595,87 +502,7 @@
                                 </div>
                             </div>
                             <!-- Small news -->
-                            <!-- Small news -->
-                            <div class="single-news mt-2">
-                                <div class="row">
-                                    <!-- Title -->
-                                    <div class="d-flex justify-content-between">
-                                        <div class="col-4 col-lg-3 pt-1">
-                                            <div class="view overlay rounded z-depth-1 mb-md-0 mb-4">
-                                                  <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(45).jpg" alt="Sample image">
-                                                  <a>
-                                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-8 col-lg-9 pl-0 small">
-                                            <a class="font-weight-bold d-block green-text">Indian Economy and issues relating to planning , growth , development and employment</a>
-                                            <p class="dark-grey-text d-none d-sm-block text-justify">Reserve Bank of India’s second annual report since demonetization reveals that 99.3% of currencynotes that were demonetized at midnight on November 8, 2016 have returned to the banking system.</p>
-                                            <div class="d-flex justify-content-between">
-                                                <a class="#!"><span class="pink-text font-weight-bold"><i class="fa fa-camera pr-2" aria-hidden="true"></i>Adventure</span></a>
-                                                <p class="dark-grey-text"><i class="fa fa-calendar"></i> 29 Aug, 2018</p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!-- Small news -->
-                            <!-- Small news -->
-                            <div class="single-news mt-2">
-                                <div class="row">
-                                    <!-- Title -->
-                                    <div class="d-flex justify-content-between">
-                                        <div class="col-4 col-lg-3 pt-1">
-                                            <div class="view overlay rounded z-depth-1 mb-md-0 mb-4">
-                                                  <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/87.jpg" alt="Sample image">
-                                                  <a>
-                                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-8 col-lg-9 pl-0 small">
-                                            <a class="font-weight-bold d-block green-text">Indian Economy and issues relating to planning , growth , development and employment</a>
-                                            <p class="dark-grey-text d-none d-sm-block text-justify">Reserve Bank of India’s second annual report since demonetization reveals that 99.3% of currencynotes that were demonetized at midnight on November 8, 2016 have returned to the banking system.</p>
-                                            <div class="d-flex justify-content-between">
-                                                <a class="#!"><span class="pink-text font-weight-bold"><i class="fa fa-camera pr-2" aria-hidden="true"></i>Adventure</span></a>
-                                                <p class="dark-grey-text"><i class="fa fa-calendar"></i> 28 Aug, 2018</p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!-- Small news -->
-                            <!-- Small news -->
-                            <div class="single-news mt-2">
-                                <div class="row">
-                                    <!-- Title -->
-                                    <div class="d-flex justify-content-between">
-                                        <div class="col-4 col-lg-3 pt-1">
-                                            <div class="view overlay rounded z-depth-1 mb-md-0 mb-4">
-                                                  <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/86.jpg" alt="Sample image">
-                                                  <a>
-                                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-8 col-lg-9 pl-0 small">
-                                            <a class="font-weight-bold d-block green-text">Indian Economy and issues relating to planning , growth , development and employment</a>
-                                            <p class="dark-grey-text d-none d-sm-block text-justify">Reserve Bank of India’s second annual report since demonetization reveals that 99.3% of currencynotes that were demonetized at midnight on November 8, 2016 have returned to the banking system.</p>
-                                            <div class="d-flex justify-content-between">
-                                                <a class="#!"><span class="pink-text font-weight-bold"><i class="fa fa-camera pr-2" aria-hidden="true"></i>Adventure</span></a>
-                                                <p class="dark-grey-text"><i class="fa fa-calendar"></i> 27 Aug, 2018</p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!-- Small news -->
+                            
                         </div>
                         <!--Grid column-->
                     </div>
@@ -715,10 +542,10 @@
                                 <!-- Data -->
                                 <div class="news-data d-flex justify-content-between">
                                   <a href="#!" class="deep-orange-text"><h6 class="font-weight-bold"><i class="fa fa-cutlery pr-2"></i>Culinary</h6></a>
-                                  <p class="font-weight-bold dark-grey-text"><i class="fa fa-calendar pr-2"></i>31 Aug, 2018</p>
+                                  <p class="font-weight-bold dark-grey-text"><i class="fa fa-calendar pr-2"></i> {{todayarticle._PublishDate | date:'dd MMM, yyyy'}}</p>
                                 </div>
                                 <!-- Excerpt -->
-                                <h3 class="h3-responsive font-weight-bold mb-3"><a href="#!article-full" class="blue-text">Title of the recent article</a></h3>
+                                <h3 class="h3-responsive font-weight-bold mb-3"><a href="#!article-full" class="blue-text" ng-bind="todayarticle._Heading"></a></h3>
                                 <p class="dark-grey-text mb-lg-0 mb-md-5 mb-4">Sed ut perspiciatis unde voluptatem omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae explicabo. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
                             </div>
                             <!-- Featured news -->
@@ -728,7 +555,7 @@
                         <!-- Grid column -->
                         <div class="col-lg-6 col-md-12">
                             <!-- Small news -->
-                            <div class="single-news mt-2">
+                            <div class="single-news mt-2" ng-repeat="pastarticle in pastarticles">
                                 <div class="row">
                                     <!-- Title -->
                                     <div class="d-flex justify-content-between">
@@ -741,11 +568,11 @@
                                             </div>
                                         </div>
                                         <div class="col-8 col-lg-9 pl-0 small">
-                                            <a href="#!article-full" class="font-weight-bold d-block blue-text">Indian Economy and issues relating to planning , growth , development and employment</a>
+                                            <a href="#!article-full" class="font-weight-bold d-block blue-text" ng-bind="pastarticle._Heading"></a>
                                             <p class="dark-grey-text d-none d-sm-block text-justify">Reserve Bank of India’s second annual report since demonetization reveals that 99.3% of currencynotes that were demonetized at midnight on November 8, 2016 have returned to the banking system.</p>
                                             <div class="d-flex justify-content-between">
                                                 <a class="#!"><span class="pink-text font-weight-bold"><i class="fa fa-camera pr-2" aria-hidden="true"></i>Adventure</span></a>
-                                                <p class="dark-grey-text"><i class="fa fa-calendar"></i> 30 Aug, 2018</p>
+                                                <p class="dark-grey-text"><i class="fa fa-calendar"></i> {{pastarticle._PublishDate | date:'dd MMM, yyyy'}}</p>
                                             </div>
                                         </div>
 
@@ -754,87 +581,7 @@
                                 </div>
                             </div>
                             <!-- Small news -->
-                            <!-- Small news -->
-                            <div class="single-news mt-2">
-                                <div class="row">
-                                    <!-- Title -->
-                                    <div class="d-flex justify-content-between">
-                                        <div class="col-4 col-lg-3 pt-1">
-                                            <div class="view overlay rounded z-depth-1 mb-md-0 mb-4">
-                                                  <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(45).jpg" alt="Sample image">
-                                                  <a href="#!article-full">
-                                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-8 col-lg-9 pl-0 small">
-                                            <a href="#!article-full" class="font-weight-bold d-block blue-text">Indian Economy and issues relating to planning , growth , development and employment</a>
-                                            <p class="dark-grey-text d-none d-sm-block text-justify">Reserve Bank of India’s second annual report since demonetization reveals that 99.3% of currencynotes that were demonetized at midnight on November 8, 2016 have returned to the banking system.</p>
-                                            <div class="d-flex justify-content-between">
-                                                <a class="#!"><span class="pink-text font-weight-bold"><i class="fa fa-camera pr-2" aria-hidden="true"></i>Adventure</span></a>
-                                                <p class="dark-grey-text"><i class="fa fa-calendar"></i> 29 Aug, 2018</p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!-- Small news -->
-                            <!-- Small news -->
-                            <div class="single-news mt-2">
-                                <div class="row">
-                                    <!-- Title -->
-                                    <div class="d-flex justify-content-between">
-                                        <div class="col-4 col-lg-3 pt-1">
-                                            <div class="view overlay rounded z-depth-1 mb-md-0 mb-4">
-                                                  <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/87.jpg" alt="Sample image">
-                                                  <a href="#!article-full">
-                                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-8 col-lg-9 pl-0 small">
-                                            <a href="#!article-full" class="font-weight-bold d-block blue-text">Indian Economy and issues relating to planning , growth , development and employment</a>
-                                            <p class="dark-grey-text d-none d-sm-block text-justify">Reserve Bank of India’s second annual report since demonetization reveals that 99.3% of currencynotes that were demonetized at midnight on November 8, 2016 have returned to the banking system.</p>
-                                            <div class="d-flex justify-content-between">
-                                                <a class="#!"><span class="pink-text font-weight-bold"><i class="fa fa-camera pr-2" aria-hidden="true"></i>Adventure</span></a>
-                                                <p class="dark-grey-text"><i class="fa fa-calendar"></i> 28 Aug, 2018</p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!-- Small news -->
-                            <!-- Small news -->
-                            <div class="single-news mt-2">
-                                <div class="row">
-                                    <!-- Title -->
-                                    <div class="d-flex justify-content-between">
-                                        <div class="col-4 col-lg-3 pt-1">
-                                            <div class="view overlay rounded z-depth-1 mb-md-0 mb-4">
-                                                  <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/86.jpg" alt="Sample image">
-                                                  <a href="#!article-full">
-                                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-8 col-lg-9 pl-0 small">
-                                            <a href="#!article-full" class="font-weight-bold d-block blue-text">Indian Economy and issues relating to planning , growth , development and employment</a>
-                                            <p class="dark-grey-text d-none d-sm-block text-justify">Reserve Bank of India’s second annual report since demonetization reveals that 99.3% of currencynotes that were demonetized at midnight on November 8, 2016 have returned to the banking system.</p>
-                                            <div class="d-flex justify-content-between">
-                                                <a class="#!"><span class="pink-text font-weight-bold"><i class="fa fa-camera pr-2" aria-hidden="true"></i>Adventure</span></a>
-                                                <p class="dark-grey-text"><i class="fa fa-calendar"></i> 27 Aug, 2018</p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!-- Small news -->
+                            
                         </div>
                         <!--Grid column-->
                     </div>
@@ -874,10 +621,10 @@
                                 <!-- Data -->
                                 <div class="news-data d-flex justify-content-between">
                                   <a href="#!" class="green-text"><h6 class="font-weight-bold"><i class="fa fa-cutlery pr-2"></i>Culinary</h6></a>
-                                  <p class="font-weight-bold dark-grey-text"><i class="fa fa-calendar pr-2"></i>31 Aug, 2018</p>
+                                  <p class="font-weight-bold dark-grey-text"><i class="fa fa-calendar pr-2"></i>{{todayquestion._PublishDate | date:'dd MMM, yyyy'}}</p>
                                 </div>
                                 <!-- Excerpt -->
-                                <h3 class="h3-responsive font-weight-bold mb-3"><a href="#!answer-writing-full" class="deep-orange-text">Title of question of the day</a></h3>
+                                <h3 class="h3-responsive font-weight-bold mb-3"><a ng-bind="todayquestion._Heading" href="#!answer-writing-full" class="deep-orange-text"></a></h3>
                                 <p class="dark-grey-text text-justify mb-lg-0 mb-md-5 mb-4">Sed ut perspiciatis unde voluptatem omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae explicabo. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
                             </div>
                             <!-- Featured news -->
@@ -887,18 +634,18 @@
                         <!-- Grid column -->
                         <div class="col-lg-6 col-md-12">
                             <!-- Small news -->
-                            <div class="single-news mt-2">
+                            <div ng-repeat="pastquestion in pastquestions" class="single-news mt-2">
                                 <div class="row">
                                     <!-- Title -->
                                     <div class="d-flex justify-content-between">
                                         <div class="col-1 pt-1">
                                         </div>
                                         <div class="col-11 pl-0 small">
-                                            <a href="#!answer-writing-full" class="font-weight-bold d-block deep-orange-text">Indian Economy and issues relating to planning , growth , development and employment</a>
+                                            <a href="#!answer-writing-full" class="font-weight-bold d-block deep-orange-text" ng-bind="pastquestion._Heading"></a>
                                             <p class="dark-grey-text d-none d-sm-block text-justify">Reserve Bank of India’s second annual report since demonetization reveals that 99.3% of currencynotes that were demonetized at midnight on November 8, 2016 have returned to the banking system.</p>
                                             <div class="d-flex justify-content-between">
                                                 <a class="#!"><span class="green-text font-weight-bold"><i class="fa fa-camera pr-2" aria-hidden="true"></i>Adventure</span></a>
-                                                <p class="dark-grey-text"><i class="fa fa-calendar"></i> 30 Aug, 2018</p>
+                                                <p class="dark-grey-text"><i class="fa fa-calendar"></i> {{pastquestion._PublishDate | date:'dd MMM, yyyy'}}</p>
                                             </div>
                                         </div>
 
@@ -907,69 +654,7 @@
                                 </div>
                             </div>
                             <!-- Small news -->
-                            <!-- Small news -->
-                            <div class="single-news mt-2">
-                                <div class="row">
-                                    <!-- Title -->
-                                    <div class="d-flex justify-content-between">
-                                        <div class="col-1 pt-1">
-                                        </div>
-                                        <div class="col-11 pl-0 small">
-                                            <a href="#!answer-writing-full" class="font-weight-bold d-block deep-orange-text">Indian Economy and issues relating to planning , growth , development and employment</a>
-                                            <p class="dark-grey-text d-none d-sm-block text-justify">Reserve Bank of India’s second annual report since demonetization reveals that 99.3% of currencynotes that were demonetized at midnight on November 8, 2016 have returned to the banking system.</p>
-                                            <div class="d-flex justify-content-between">
-                                                <a class="#!"><span class="green-text font-weight-bold"><i class="fa fa-camera pr-2" aria-hidden="true"></i>Adventure</span></a>
-                                                <p class="dark-grey-text"><i class="fa fa-calendar"></i> 29 Aug, 2018</p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!-- Small news -->
-                            <!-- Small news -->
-                            <div class="single-news mt-2">
-                                <div class="row">
-                                    <!-- Title -->
-                                    <div class="d-flex justify-content-between">
-                                        <div class="col-1 pt-1">
-                                        </div>
-                                        <div class="col-11 pl-0 small">
-                                            <a href="#!answer-writing-full" class="font-weight-bold d-block deep-orange-text">Indian Economy and issues relating to planning , growth , development and employment</a>
-                                            <p class="dark-grey-text d-none d-sm-block text-justify">Reserve Bank of India’s second annual report since demonetization reveals that 99.3% of currencynotes that were demonetized at midnight on November 8, 2016 have returned to the banking system.</p>
-                                            <div class="d-flex justify-content-between">
-                                                <a class="#!"><span class="green-text font-weight-bold"><i class="fa fa-camera pr-2" aria-hidden="true"></i>Adventure</span></a>
-                                                <p class="dark-grey-text"><i class="fa fa-calendar"></i> 28 Aug, 2018</p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!-- Small news -->
-                            <!-- Small news -->
-                            <div class="single-news mt-2">
-                                <div class="row">
-                                    <!-- Title -->
-                                    <div class="d-flex justify-content-between">
-                                        <div class="col-1 pt-1">
-                                        </div>
-                                        <div class="col-11 pl-0 small">
-                                            <a href="#!answer-writing-full" class="font-weight-bold d-block deep-orange-text">Indian Economy and issues relating to planning , growth , development and employment</a>
-                                            <p class="dark-grey-text d-none d-sm-block text-justify">Reserve Bank of India’s second annual report since demonetization reveals that 99.3% of currencynotes that were demonetized at midnight on November 8, 2016 have returned to the banking system.</p>
-                                            <div class="d-flex justify-content-between">
-                                                <a class="#!"><span class="green-text font-weight-bold"><i class="fa fa-camera pr-2" aria-hidden="true"></i>Adventure</span></a>
-                                                <p class="dark-grey-text"><i class="fa fa-calendar"></i> 27 Aug, 2018</p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!-- Small news -->
+                            
                         </div>
                         <!--Grid column-->
                     </div>
@@ -995,81 +680,21 @@
                     <!-- Grid row -->
                     <div class="row">
                         <!-- Grid Column -->
-                        <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="col-lg-4 col-md-6 mb-4" ng-repeat="quiz in quizes">
                           <!-- Card -->
                           <div class="card card-cascade">
                             <!-- Card image -->
                             <div class="view view-cascade gradient-card-header green-gradient">
                               <!-- Title -->
-                              <h2 class="card-header-title mb-3">Daily Quiz</h2>
+                              <h3 class="card-header-title mb-3" ng-bind="quiz._TestName"></h3>
                               <!-- Subtitle -->
-                              <p class="mb-0 font-weight-bold"><i class="fa fa-calendar mr-2"></i> 06 Sep, 2018</p>
+                              <p class="mb-0 font-weight-bold"><i class="fa fa-calendar mr-2"></i> {{quiz.publishDate | date:'dd MMM, y'}}</p>
                             </div>
                             <!-- Card content -->
                             <div class="card-body card-body-cascade text-center">
                               <!-- Text -->
                               <p class="card-text dark-grey-text font-weight-bold">10 Questions</p>
-                              <button type="button" class="btn btn-danger">Start Exam</button>
-                              <hr>
-                              <!-- Facebook -->
-                              <a type="button" class="btn-floating btn-sm btn-fb"><i class="fa fa-facebook"></i></a>
-                              <!-- Twitter -->
-                              <a type="button" class="btn-floating btn-sm btn-tw"><i class="fa fa-twitter"></i></a>
-                              <!--Whatsapp -->
-                              <a type="button" class="btn-floating btn-sm btn-wa"><i class="fa fa-whatsapp"></i></a>
-                              <!-- Email -->
-                              <a type="button" class="btn-floating btn-sm btn-email"><i class="fa fa-envelope"></i></a>
-                            </div>
-                          </div>
-                          <!-- Card -->
-                        </div>
-                        <!-- Grid Column -->
-                        <!-- Grid Column -->
-                        <div class="col-lg-4 col-md-6 mb-4">
-                          <!-- Card -->
-                          <div class="card card-cascade">
-                            <!-- Card image -->
-                            <div class="view view-cascade gradient-card-header green-gradient">
-                              <!-- Title -->
-                              <h2 class="card-header-title mb-3">Daily Quiz</h2>
-                              <!-- Subtitle -->
-                              <p class="mb-0 font-weight-bold"><i class="fa fa-calendar mr-2"></i> 06 Sep, 2018</p>
-                            </div>
-                            <!-- Card content -->
-                            <div class="card-body card-body-cascade text-center">
-                              <!-- Text -->
-                              <p class="card-text dark-grey-text font-weight-bold">10 Questions</p>
-                              <button type="button" class="btn btn-danger">Start Exam</button>
-                              <hr>
-                              <!-- Facebook -->
-                              <a type="button" class="btn-floating btn-sm btn-fb"><i class="fa fa-facebook"></i></a>
-                              <!-- Twitter -->
-                              <a type="button" class="btn-floating btn-sm btn-tw"><i class="fa fa-twitter"></i></a>
-                              <!--Whatsapp -->
-                              <a type="button" class="btn-floating btn-sm btn-wa"><i class="fa fa-whatsapp"></i></a>
-                              <!-- Email -->
-                              <a type="button" class="btn-floating btn-sm btn-email"><i class="fa fa-envelope"></i></a>
-                            </div>
-                          </div>
-                          <!-- Card -->
-                        </div>
-                        <!-- Grid Column -->
-                        <!-- Grid Column -->
-                        <div class="col-lg-4 col-md-6 mb-4">
-                          <!-- Card -->
-                          <div class="card card-cascade">
-                            <!-- Card image -->
-                            <div class="view view-cascade gradient-card-header green-gradient">
-                              <!-- Title -->
-                              <h2 class="card-header-title mb-3">Daily Quiz</h2>
-                              <!-- Subtitle -->
-                              <p class="mb-0 font-weight-bold"><i class="fa fa-calendar mr-2"></i> 06 Sep, 2018</p>
-                            </div>
-                            <!-- Card content -->
-                            <div class="card-body card-body-cascade text-center">
-                              <!-- Text -->
-                              <p class="card-text dark-grey-text font-weight-bold">10 Questions</p>
-                              <button type="button" class="btn btn-danger">Start Exam</button>
+                              <a href="#!daily-quiz/{{quiz._TestId}}" class="btn btn-danger">Start Exam</a>
                               <hr>
                               <!-- Facebook -->
                               <a type="button" class="btn-floating btn-sm btn-fb"><i class="fa fa-facebook"></i></a>

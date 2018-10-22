@@ -30,7 +30,7 @@ app.config(function($routeProvider, $locationProvider){
         templateUrl: 'views/latest-updates.html',
     })
     .when('/downloads', {
-        templateUrl: 'views/downloads.html',
+        templateUrl: 'views/current-affairs.html',
     })
     .when('/essential-books-prelims', {
         templateUrl: 'views/essential-books-prelims.html',
